@@ -4,43 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yvette Daniel</title>
-    <!-- Google Fonts: Using Cormorant Garamond for its weighted, natural human cadence -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* Elemental, matte canvas styling */
         body {
-            background-color: #F2F1EC; /* Deep clay / raw stone baseline */
-            color: #1A1C1B;           /* Unburnished iron-ore charcoal */
+            background-color: #F2F1EC;
+            color: #1A1C1B;
             font-family: 'Cormorant Garamond', Georgia, serif;
             font-size: 22px;
-            line-height: 1.6;
+            line-height: 1.65;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Roomy, spacious holding container */
         .container {
             width: 100%;
-            max-width: 720px;
-            padding: 40px 24px;
+            max-width: 680px;
+            padding: 100px 24px;
             box-sizing: border-box;
         }
 
-        /* Large, unadorned thesis layout */
         .thesis {
             font-size: 38px;
             line-height: 1.3;
             font-weight: 600;
-            margin-bottom: 48px;
+            margin-bottom: 64px;
             letter-spacing: -0.5px;
         }
 
@@ -49,40 +43,70 @@
             margin-bottom: 8px;
         }
 
-        /* Body movements with natural vertical rhythm */
-        .manifesto-text p {
-            font-style: italic;
+        /* Continuous single-column content sections */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section p {
             margin-bottom: 28px;
         }
 
-        .manifesto-text p:last-of-type {
-            margin-bottom: 48px;
-        }
-
-        /* Lakeside location signature line */
-        .signature {
-            font-size: 24px;
+        .section h2 {
+            font-size: 28px;
             font-weight: 600;
-            margin-bottom: 64px;
+            margin-top: 0;
+            margin-bottom: 32px;
+            letter-spacing: -0.3px;
         }
 
-        /* Fluid, non-linear navigation linkages */
+        /* Manuscript Image Framing Rules */
+        .artifact-frame {
+            margin: 64px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .artifact-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            /* Subtly blends image borders into the clay canvas */
+            mix-blend-mode: multiply; 
+            opacity: 0.95;
+        }
+
+        .artifact-caption {
+            margin-top: 16px;
+            font-size: 16px;
+            font-style: italic;
+            opacity: 0.6;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #1A1C1B;
+            opacity: 0.15;
+            margin: 80px 0;
+        }
+
         .navigation {
             display: flex;
             gap: 40px;
             align-items: center;
+            margin-top: 48px;
         }
 
         .nav-link {
             color: #1A1C1B;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
             position: relative;
-            transition: opacity 0.3s ease;
         }
 
-        /* Soft, fluid underline behavior matching water flow rules */
         .nav-link::after {
             content: '';
             position: absolute;
@@ -93,58 +117,72 @@
             background-color: #1A1C1B;
             transform: scaleX(0.3);
             transform-origin: left;
-            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            transition: transform 0.4s ease;
         }
 
         .nav-link:hover::after {
             transform: scaleX(1);
         }
 
-        .nav-link:hover {
-            opacity: 0.8;
-        }
-
-        /* Mobile adaptation ensuring asymmetric room remains intact */
         @media (max-width: 600px) {
-            body {
-                font-size: 20px;
-                align-items: flex-start;
-            }
-            .thesis {
-                font-size: 28px;
-            }
-            .navigation {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 24px;
-            }
+            body { font-size: 20px; }
+            .container { padding: 60px 20px; }
+            .thesis { font-size: 28px; }
+            .navigation { flex-direction: column; align-items: flex-start; gap: 24px; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Pillar 1: Home/Threshold Core -->
+        
+        <!-- THRESHOLD -->
         <div class="thesis">
             <span>Wholeness is not a destination of perfection.</span>
             <span>It is the gathering of your scattered pieces back into the whole.</span>
         </div>
 
-        <div class="manifesto-text">
+        <!-- IMAGE ARTIFACT 1: THE FRONT COVER -->
+        <div class="artifact-frame">
+            <!-- Replace filename below with your exact uploaded cover image path -->
+            <img src="Cancer - a wholeness revolution.png" alt="Cancer: A Wholeness Revolution Book Cover" class="artifact-img" style="max-height: 550px;">
+            <div class="artifact-caption">Forthcoming Cover Layout — The Crucible Field</div>
+        </div>
+
+        <!-- THE MANUSCRIPT SUMMARY -->
+        <div class="section">
             <p>The patterns that shape the psyche also shape the cells. Illness is not a separate medical battle; it is a message from within the field of your life, asking to be seen, felt, and integrated.</p>
             
             <p>Returning home to the body requires moving past intellectual self-awareness. It means finding the somatic certainty of a clean no, reweaving the inherited patterns of your bloodlines, and entering the deep practice of self-leadership.</p>
         </div>
 
-        <div class="signature">
-            I write and live lakeside at Rotomā.
+        <div class="divider"></div>
+
+        <!-- IMAGE ARTIFACT 2: LANDSCAPE ANCHOR -->
+        <div class="artifact-frame">
+            <!-- PLACEHOLDER: You can upload a photo of the Rotomā landscape to GitHub and link it here -->
+            <img src="rotoma-landscape.jpg" alt="Rotomā Landscape Texture" class="artifact-img" style="max-height: 350px;">
+            <div class="artifact-caption">The baseline presence — Rotomā</div>
         </div>
 
-        <!-- Pillar Navigation Framework -->
+        <!-- THE ORIENTATION (ABOUT) -->
+        <div class="section">
+            <h2>The Orientation</h2>
+            <p>I live and work off-grid within the elemental footprint of the land at Lake Rotomā.</p>
+            
+            <p>My work does not sit within conventional therapeutic frameworks. It is an exploration of self-sovereignty, somatic integration, and the raw intelligence of self-leadership. After a professional background navigating physical practices, moving through a profound confrontation with cancer, and stripping away external systems, the focus here is entirely on the reclamation of wholeness.</p>
+            
+            <p>This space exists as a direct transmission of that landscape.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- LINKS -->
         <div class="navigation">
-            <a href="book.html" class="nav-link">[ The Manifesto ]</a>
+            <a href="book.html" class="nav-link">[ Read the Full Manifesto ]</a>
             <a href="https://dialogue.yvettedaniel.co" class="nav-link" target="_blank">[ The Dialogue ]</a>
         </div>
+
     </div>
 
 </body>
